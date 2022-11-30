@@ -68,9 +68,59 @@ ALTER TABLE ONLY public.member ALTER COLUMN memberid SET DEFAULT nextval('public
 -- Data for Name: member; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.member (firstname, lastname, memberid, grade) FROM stdin;
-Robin	Meier	2	6
-Peter	Sacher	3	4
+COPY public.member (firstname, lastname, grade) FROM stdin;
+Robin	Meier 	6
+Peter	Sacher	4
+Christian	Sankt	3
+Jessika	Bauer	5
+Maria	Farber	6 
+Tom	Jaeger	2
+Mike	Müller	2
+Wolfgang	Schiffer	3
+Jens	Rothstein	3
+Niklas	Werfel	4
+Heike	Schuhmacher	4
+Florian	Luft	5
+Mathias	Goldschmidt	5
+Janina	Hofmann	5
+Kristin	Roth	3
+Susanne	Kluge	5
+Silke	Oster	4
+Niklas	Pfeiffer	4
+Ulrike	Barth	4
+Maik	Probst	4
+Benjamin	Krüger	4
+Sebastian	Mayer	4
+Ralf	Waechter	4
+Tom	Bader	4
+Marko	Vogt	4
+Angelika	Reinhardt	4
+Barbara	Kirsch	4
+Lisa	Goldschmidt	4
+Juliane	Fuhrmann	4
+Leah	Sankt	4
+Kevin	Kaiser	4
+Lea	Schäfer	5
+Annett	Luft	5
+Melanie	Gloeckner	5
+Petra	Dietrich	5
+Christina	Bumgarner	5
+Tobias	Baecker	5
+Andrea	Fuhrmann	5
+Angelika	Hoover	5
+Anne	Hoffmann	5
+Sven	Schiffer	5
+Sabine	Meister	5
+Jens	Scholz	5
+Jana	Loewe	5
+Eric	Klug	5
+Laura	Schroeder	5
+Jürgen	Schmidt	5
+Leonie	Farber	5
+Uta	Schäfer	5
+Nadine	Kortig	5
+Melanie	Fassbinder	5
+Mandy	Furst	5
 \.
 
 
