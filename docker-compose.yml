@@ -1,0 +1,27 @@
+version: '3.1'
+
+services:
+ db:
+  image: postgres
+  container_name: postgres
+  restart: always
+  ports:
+   - 5432:5432
+  volumes:
+   - ./postgresDB:/var/lib/postgresql/data
+  environment:
+   POSTGRES_PASSWORD: 9uxXYpq5yTxGK8U2rZ
+ # web:
+ #  image: node
+ #  container_name: site
+ #  restart: always
+ #  user: "node"
+ #  working_dir: /home/node/app
+ #  environment:
+ #   NODE_ENV: production
+ #   DB_HOST: db
+ #  volumes:
+ #   - ./:/home/node/app
+ #  ports:
+ #  - 3000:3000
+ #  command: "npm start"
