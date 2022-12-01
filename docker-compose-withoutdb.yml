@@ -1,0 +1,21 @@
+version: '3.1'
+
+services:
+ web:
+  image: node
+  container_name: site
+  restart: always
+  user: "node"
+  working_dir: /home/node/app
+  environment:
+   NODE_ENV: production
+   DB_HOST: db
+   DB_USER: postgres
+   DB_PASS: 9uxXYpq5yTxGK8U2rZ
+   DB_PORT: 5432
+   DB_DATABASE: uek109
+  volumes:
+   - ./:/home/node/app
+  ports:
+  - 80:3000
+  command: "npm start"
