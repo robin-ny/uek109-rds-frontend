@@ -19,10 +19,9 @@ function elt (type, children) {
 
 const url = "http://localhost:3000/";
 
-
 function updateTable(e){
   e.preventDefault(); 
-
+  const url = e.currentTarget.action;
   const formData = new FormData(e.currentTarget);
   const plainFormData = Object.fromEntries(formData.entries());
   const data = JSON.stringify(plainFormData);
