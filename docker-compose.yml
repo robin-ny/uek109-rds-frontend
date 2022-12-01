@@ -11,6 +11,7 @@ services:
    - ./postgresDB:/var/lib/postgresql/data
   environment:
    POSTGRES_PASSWORD: 9uxXYpq5yTxGK8U2rZ
+   POSTGRES_DB: uek109
  web:
   image: node
   container_name: site
