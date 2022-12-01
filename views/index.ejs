@@ -1,14 +1,13 @@
 <%- include('head', { title: 'ÜK109' }) -%>
 <script src="tabler.js"></script>
 
-<form method="put" onSubmit="fetchMembers()">
+<form onsubmit="return updateTable(event)">
   <input type="text" name="firstname" id="firstname" placeholder="firstname">
   <input type="text" name="lastname" id="lastname" placeholder="lastname">
   <input type="text" name="grade" id="grade" placeholder="grade">
-  <input type="submit" value="Show Table">
+  <input type="submit" value="Add/List Members">
 </form>
 
-<button method="put" onClick="fetchMembers()"></button>
 <div class="member-table">
   <table>
       <thead class="member-head">
@@ -20,9 +19,7 @@
       </thead>
       <tbody class="member-rows">
         <tr>
-          <td>First Name</td>
-          <td>Last Name</td>
-          <td>Grade</td>
+
         </tr>
       </tbody>
   </table>
