@@ -27,7 +27,7 @@ SET default_table_access_method = heap;
 CREATE TABLE public.member (
     firstname character varying(30) NOT NULL,
     lastname character varying(30) NOT NULL,
-    memberid integer NOT NULL,
+    memberid serial NOT NULL,
     grade smallint,
     CONSTRAINT "grade >=1 and grade <=6" CHECK (((grade >= 1) AND (grade <= 6)))
 );
@@ -35,33 +35,33 @@ CREATE TABLE public.member (
 
 ALTER TABLE public.member OWNER TO postgres;
 
---
--- Name: members_memberid_seq; Type: SEQUENCE; Schema: public; Owner: postgres
---
+-- --
+-- -- Name: members_memberid_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- --
 
-CREATE SEQUENCE public.members_memberid_seq
-    AS integer
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.members_memberid_seq OWNER TO postgres;
-
---
--- Name: members_memberid_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
---
-
-ALTER SEQUENCE public.members_memberid_seq OWNED BY public.member.memberid;
+-- CREATE SEQUENCE public.members_memberid_seq
+--     AS integer
+--     START WITH 1
+--     INCREMENT BY 1
+--     NO MINVALUE
+--     NO MAXVALUE
+--     CACHE 1;
 
 
---
--- Name: member memberid; Type: DEFAULT; Schema: public; Owner: postgres
---
+-- ALTER TABLE public.members_memberid_seq OWNER TO postgres;
 
-ALTER TABLE ONLY public.member ALTER COLUMN memberid SET DEFAULT nextval('public.members_memberid_seq'::regclass);
+-- --
+-- -- Name: members_memberid_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- --
+
+-- ALTER SEQUENCE public.members_memberid_seq OWNED BY public.member.memberid;
+
+
+-- --
+-- -- Name: member memberid; Type: DEFAULT; Schema: public; Owner: postgres
+-- --
+
+-- ALTER TABLE ONLY public.member ALTER COLUMN memberid SET DEFAULT nextval('public.members_memberid_seq'::regclass);
 
 
 --
@@ -128,7 +128,7 @@ Mandy	Furst	5
 -- Name: members_memberid_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.members_memberid_seq', 3, true);
+--SELECT pg_catalog.setval('public.members_memberid_seq', 3, true);
 
 
 --
