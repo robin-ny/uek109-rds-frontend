@@ -16,8 +16,8 @@ app.use(express.static('public'));
 app.use(express.json());
 
 const pgp = require('pg-promise')()
-//const db = pgp('postgres://'+process.env.DB_USER+':'+process.env.DB_PASS+'@'+process.env.DB_HOST+':'+process.env.DB_PORT+'/'+process.env.DB_DATABASE)
-const db = pgp('postgres://postgres:9uxXYpq5yTxGK8U2rZ@localhost:5432/uek109')
+const db = pgp('postgres://'+process.env.DB_USER+':'+process.env.DB_PASS+'@'+process.env.DB_HOST+':'+process.env.DB_PORT+'/'+process.env.DB_DATABASE)
+
 
 function queryMembers(fn){
   db.query("select * from member;")
